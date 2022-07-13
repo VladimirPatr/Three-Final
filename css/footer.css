@@ -31,10 +31,10 @@
     display: block;
     background-image: url(../img/icon-mail.svg);
     margin-bottom: 40px;
-    transition: color 1s ease-in-out; 
+    transition: color .4s ease-in-out; 
 }
 .footer__mail {
-    transition: color .5s ease-in-out;  
+    transition: color .2s ease-in-out;  
 }
 
 .contacts__item_tel:hover, .contacts__item_mail:hover, .footer__mail:hover {
@@ -78,7 +78,7 @@
     text-align: right;
 }
 .social__icon a svg path {
-    transition: fill .5s ease-in-out;
+    transition: fill .2s ease-in-out;
 }
 
 .social__icon a svg:hover #instagram, .social__icon a svg:hover #vk, .social__icon a svg:hover #facebook, .social__icon a svg:hover #telegramm,

@@ -41,7 +41,7 @@ input {
     text-transform: uppercase;
     border: 3px solid transparent;
 
-    transition: background .5s ease-in-out,  border .5s ease-in-out;
+    transition: background .2s ease-in-out,  border .2s ease-in-out;
 }
 .booking__item label:hover, .booking__item label:focus {
     background: #EADEED;
@@ -66,7 +66,9 @@ input {
     margin-bottom: 24px;
 }
 .booking__item__set input {
-    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
 
 .booking__item__set label {
@@ -78,8 +80,43 @@ input {
 	line-height: 18px;
 	user-select: none;
 }
-.booking__item__set label:before, .booking__item__set_radio label:after {
-	content: "";
+
+.castom-chekbox {
+    content: "";
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: 7px;
+	bottom: -2px;
+	background-color:  var(--main-color, #FFF);
+    border: 1px solid transparent;
+
+    transition: border .2s ease-in-out;
+}
+.castom-chekbox::before {
+    content: '';
+	width: 20px;
+	height: 15px;
+	background-image: url(../img/icon-check.svg);
+	background-size: contain;
+	position: absolute;
+	left: 2px;
+	bottom: 3px;
+	transform: scale(0);
+    z-index: 2;
+}
+.booking__item__set_chek label:focus  .castom-chekbox{
+    border: 1px solid blue;
+}
+.booking__item__set_chek input:checked + .castom-chekbox::before {
+    transform: scale(1);
+}
+
+
+.booking__item__set_radio label:before{
+    border-radius: 50px;
+    content: "";
 	display: inline-block;
 	width: 25px;
 	height: 25px;
@@ -89,20 +126,13 @@ input {
 	background-color:  var(--main-color, #FFF);
     border: 1px solid transparent;
 
-    transition: border .5s ease-in-out;
-}
-.booking__item__set label:focus:before {
-    border: 1px solid #CD06FF;
-}
-
-.booking__item__set_radio label:before{
-    border-radius: 50px;
+    transition: border .2s ease-in-out;
 }
 .booking__item__set_radio label:after {
     background: transparent;
-    transition: border .5s ease-in-out;
+    transition: border .2s ease-in-out;
 }  
-.booking__item__set_radio label:focus:after{
+.booking__item__set_radio label:focus:before {
    border: 1px solid blue;
 
 }
@@ -157,7 +187,7 @@ input {
     border: 2px solid transparent;
     width: 100%;
 
-    transition: border .5s ease-in-out;
+    transition: border .2s ease-in-out;
 
 }
 .booking__label:focus {
@@ -199,7 +229,7 @@ input {
     border: 3px solid transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    transition: background .5s ease-in-out, color .5s ease-in-out, border .5s ease-in-out;
+    transition: background .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out;
 }
 .btn__form:hover {
     background: #EADEED;
@@ -327,6 +357,10 @@ input {
     }
     .booking__item__date:nth-child(3) {
         flex-direction: column;
+    }
+
+    .booking__item__set_chek label:focus  .castom-chekbox {
+        border: 4px solid red;
     }
   
 }   

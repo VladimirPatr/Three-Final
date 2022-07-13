@@ -27,7 +27,7 @@
     
 }
 .header__menu a:hover{
-    transition: color .5s ease-in-out;
+    transition: color .2s ease-in-out;
 }
 .header__menu a:hover{
     color: var(--btn-bg-color-h, #840AA3);
@@ -41,7 +41,7 @@
     padding: 12px 32px 13px 32px;
     border: solid 3px #CD06FF;
     border-radius: 10px;
-    transition: border .5s ease-in-out, background-color 1s ease-in-out;
+    transition: border .2s ease-in-out, background-color .4s ease-in-out;
 }
 .header__btn:hover, .header__btn:focus {
     border: 3px solid #6C0287;

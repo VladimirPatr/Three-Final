@@ -17,7 +17,7 @@
     background-size: cover; 
     position: relative;
 
-    transition: transform .5s ease-in-out;
+    transition: transform .2s ease-in-out;
 }
 .pluses__item_1 {
     background-image: url(../img/pluses-1.jpg);
@@ -49,7 +49,9 @@
     top: 166px;
     left: 40px;
 }
-
+.pluses__item:hover {
+    transform: scale(1.1);
+}
 .pluses__item_2:hover, .pluses__item_5:hover {
     transform: scale(1.1) translateY(70px);
 }
